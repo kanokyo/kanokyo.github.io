@@ -9,7 +9,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Github, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const Form = () => {
   return (
@@ -23,9 +23,5 @@ const Form = () => {
     </Sheet>
   );
 };
-
-// export default function Contact() {
-//   return <div></div>;
-// }
 
 export default Form;

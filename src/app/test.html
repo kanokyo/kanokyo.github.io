@@ -1,0 +1,2231 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT" />
+
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="SHORTCUT ICON" href="/campusweb/theme/default/image/favicon.ico" />
+
+    <title>単位修得状況照会</title>
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/jquery-core/3.4.1/themes/smoothness/theme.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/jquery-core/3.4.1/jquery-3.4.1.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/campus/6.0/css/old50_StyleSheet.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/campus/6.0/js/old50_Script.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/theme/default/newportal/portal_tabmenu.css" />
+    <link type="text/css" rel="stylesheet" href="/campusweb/theme/default/newportal/portal_table.css" />
+    <link type="text/css" rel="stylesheet" href="/campusweb/theme/default/newportal/portal_portlet.css" />
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/campus/6.0/css/old50_StyleSheet.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/campus/6.0/js/old50_portal_main.js"></script>
+    <script type="text/javascript" src="/campusweb/static/pub/campus/6.0/js/old50_portal_common.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/materialize/1.0.0/css/materialize.css" />
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/campus/6.0/md_icon/material-icons.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/materialize/1.0.0/js/materialize.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/fontawesome/5.12.1/css/all.css" />
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/perfect-scrollbar/1.4.0/css/perfect-scrollbar.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/perfect-scrollbar/1.4.0/dist/perfect-scrollbar.min.js"></script>
+
+    <script type="text/javascript" src="/campusweb/static/pub/mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/jquery-core/3.4.1/themes/smoothness/jquery-ui.min.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/jquery-core/3.4.1/jquery-ui-1.12.1.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/flexslider/2.6.0-0/flexslider.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/flexslider/2.6.0-0/jquery.flexslider-min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/campusweb/static/pub/cleditor/1.4.4/jquery.cleditor.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/cleditor/1.4.4/jquery.cleditor.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/campusweb/static/pub/spectrum/1.8.1/spectrum.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/spectrum/1.8.1/spectrum.js"></script>
+    <script type="text/javascript" src="/campusweb/static/pub/spectrum/1.8.1/jquery.spectrum-ja.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/campus/6.0/css/base.css" />
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/campus/6.0/css/theme_default.css" />
+    <link type="text/css" rel="stylesheet" href="/campusweb/static/pub/campus/6.0/css/func.css" />
+    <script type="text/javascript" src="/campusweb/static/pub/campus/6.0/js/convert.js"></script>
+    <script type="text/javascript" src="/campusweb/static/pub/campus/6.0/js/base.js"></script>
+    <script type="text/javascript" src="/campusweb/static/pub/campus/6.0/js/func.js"></script>
+
+    <style type="text/css">
+        body.logout {
+            background-color: rgb(247, 247, 247);
+        }
+        
+         :root {
+            --header-background: rgb(247, 247, 247);
+            --header-color: rgb(51, 51, 51);
+            --body-background: rgb(255, 255, 255);
+            --body-color: rgb(51, 51, 51);
+            --footer-background: rgb(247, 247, 247);
+            --footer-color: rgb(51, 51, 51);
+            --menu-background: rgb(231, 231, 231);
+            --menu-color: rgb(51, 51, 51);
+            --menu-hover-background: rgba(64, 64, 64, 0.05);
+            --menu-hover-color: rgb(64, 80, 255);
+            --theme-background: 32, 103, 143;
+            --theme-color: 238, 238, 238;
+            --system-menu-background: rgb(255, 255, 255);
+            --system-menu-color: rgb(51, 51, 51);
+            --system-breadcrumb-color: rgb(102, 102, 102);
+            --menu-list-background: rgb(255, 255, 255);
+            --menu-list-color: rgb(51, 51, 51);
+            --body-link-color: rgb(51, 51, 204);
+            --body-link-hover-background: rgba(64, 64, 64, 0.05);
+            --body-link-hover-color: rgb(64, 80, 255);
+            --button-background: rgb(57, 105, 137);
+            --button-color: rgb(240, 240, 240);
+            --focus-background: rgba(0, 16, 32, 0.7);
+            --focus-color: rgb(255, 255, 255);
+            --focus-shadow: rgb(85, 153, 238);
+        }
+        
+        #tabtable {
+            width: 1000px;
+        }
+        
+        #tabtable .tabcell {
+            width: 91px;
+        }
+        
+        #tabtable .tabcell img {
+            width: 48px;
+            height: 48px;
+            margin-left: 21px;
+        }
+        
+        .login-active .card {
+            background: none;
+            background-image: none;
+            background-color: rgb(255, 255, 255) !important;
+        }
+        
+        .login-active .card {
+            border: 1px transparent solid !important;
+        }
+        
+        .login-active .card {
+            border-radius: 0 !important;
+        }
+        
+        .login-active .card {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        .login-active .card {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        .login-active .card {
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        /* for Webkit */
+        
+        .portlet-title {
+            display: block;
+        }
+        
+        .portlet-title-linker {
+            display: block;
+        }
+        
+        .portlet-title {
+            background: none;
+            background-image: none;
+            background-color: rgb(120, 144, 156) !important;
+        }
+        
+        .portlet-title {
+            border-radius: 0 !important;
+        }
+        
+        .portlet-title {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        .portlet-title {
+            color: white !important;
+        }
+        
+        body.logout {
+            background-color: null;
+        }
+        
+        #wf_PTW0060100-news_20200330130648-box {
+            background: none;
+            background-image: none;
+            background-color: rgb(255, 255, 255) !important;
+        }
+        
+        #wf_PTW0060100-news_20200330130648-box {
+            border: 1px transparent solid !important;
+        }
+        
+        #wf_PTW0060100-news_20200330130648-box {
+            border-radius: 0 !important;
+        }
+        
+        #wf_PTW0060100-news_20200330130648-box {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0060100-news_20200330130648-box {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        #wf_PTW0060100-news_20200330130648-box {
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0060100-news_20200330130648-box .portlet-title {
+            display: block;
+        }
+        
+        #wf_PTW0060100-news_20200330130648-box .portlet-title-linker {
+            display: block;
+        }
+        
+        #wf_PTW0060100-news_20200330130648-box .portlet-title {
+            background: none;
+            background-image: none;
+            background-color: rgb(221, 238, 255) !important;
+        }
+        
+        #wf_PTW0060100-news_20200330130648-box .portlet-title {
+            border-radius: 0 !important;
+        }
+        
+        #wf_PTW0060100-news_20200330130648-box .portlet-title {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0060100-news_20200330130648-box .portlet-title {
+            color: black !important;
+        }
+        
+        body.logout {
+            background-color: null;
+        }
+        
+        #wf_PTW0060100-slider_20200330130552-box {
+            background: none;
+            background-image: none;
+            background-color: rgb(255, 255, 255) !important;
+        }
+        
+        #wf_PTW0060100-slider_20200330130552-box {
+            border: 1px transparent solid !important;
+        }
+        
+        #wf_PTW0060100-slider_20200330130552-box {
+            border-radius: 0 !important;
+        }
+        
+        #wf_PTW0060100-slider_20200330130552-box {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0060100-slider_20200330130552-box {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        #wf_PTW0060100-slider_20200330130552-box {
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0060100-slider_20200330130552-box .portlet-title {
+            display: none !important;
+        }
+        
+        #wf_PTW0060100-slider_20200330130552-box .portlet-title-linker {
+            display: none !important;
+        }
+        
+        body.logout {
+            background-color: null;
+        }
+        
+        #wf_PTW0065500-s_20180822165806-box {
+            background: none;
+            background-image: none;
+            background-color: rgb(255, 255, 255) !important;
+        }
+        
+        #wf_PTW0065500-s_20180822165806-box {
+            border: 1px transparent solid !important;
+        }
+        
+        #wf_PTW0065500-s_20180822165806-box {
+            border-radius: 0 !important;
+        }
+        
+        #wf_PTW0065500-s_20180822165806-box {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0065500-s_20180822165806-box {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        #wf_PTW0065500-s_20180822165806-box {
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0065500-s_20180822165806-box .portlet-title {
+            display: block;
+        }
+        
+        #wf_PTW0065500-s_20180822165806-box .portlet-title-linker {
+            display: block;
+        }
+        
+        #wf_PTW0065500-s_20180822165806-box .portlet-title {
+            background: none;
+            background-image: none;
+            background-color: rgb(120, 144, 156) !important;
+        }
+        
+        #wf_PTW0065500-s_20180822165806-box .portlet-title {
+            border-radius: 0 !important;
+        }
+        
+        #wf_PTW0065500-s_20180822165806-box .portlet-title {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0065500-s_20180822165806-box .portlet-title {
+            color: white !important;
+        }
+        
+        body.logout {
+            background-color: null;
+        }
+        
+        #wf_PTW0065200-s_20121009102206-box {
+            background: none;
+            background-image: none;
+            background-color: rgb(255, 255, 255) !important;
+        }
+        
+        #wf_PTW0065200-s_20121009102206-box {
+            border: 1px transparent solid !important;
+        }
+        
+        #wf_PTW0065200-s_20121009102206-box {
+            border-radius: 0 !important;
+        }
+        
+        #wf_PTW0065200-s_20121009102206-box {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0065200-s_20121009102206-box {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        #wf_PTW0065200-s_20121009102206-box {
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0065200-s_20121009102206-box .portlet-title {
+            display: block;
+        }
+        
+        #wf_PTW0065200-s_20121009102206-box .portlet-title-linker {
+            display: block;
+        }
+        
+        #wf_PTW0065200-s_20121009102206-box .portlet-title {
+            background: none;
+            background-image: none;
+            background-color: rgb(197, 225, 165) !important;
+        }
+        
+        #wf_PTW0065200-s_20121009102206-box .portlet-title {
+            border-radius: 0 !important;
+        }
+        
+        #wf_PTW0065200-s_20121009102206-box .portlet-title {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0065200-s_20121009102206-box .portlet-title {
+            color: black !important;
+        }
+        
+        body.logout {
+            background-color: null;
+        }
+        
+        #wf_PTW0065000-s_20120920145200-box {
+            background: none;
+            background-image: none;
+            background-color: rgb(255, 255, 255) !important;
+        }
+        
+        #wf_PTW0065000-s_20120920145200-box {
+            border: 1px transparent solid !important;
+        }
+        
+        #wf_PTW0065000-s_20120920145200-box {
+            border-radius: 0 !important;
+        }
+        
+        #wf_PTW0065000-s_20120920145200-box {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0065000-s_20120920145200-box {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        #wf_PTW0065000-s_20120920145200-box {
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0065000-s_20120920145200-box .portlet-title {
+            display: block;
+        }
+        
+        #wf_PTW0065000-s_20120920145200-box .portlet-title-linker {
+            display: block;
+        }
+        
+        #wf_PTW0065000-s_20120920145200-box .portlet-title {
+            background: none;
+            background-image: none;
+            background-color: rgb(255, 204, 128) !important;
+        }
+        
+        #wf_PTW0065000-s_20120920145200-box .portlet-title {
+            border-radius: 0 !important;
+        }
+        
+        #wf_PTW0065000-s_20120920145200-box .portlet-title {
+            -webkit-border-radius: 0 !important;
+        }
+        /* for Webkit */
+        
+        #wf_PTW0065000-s_20120920145200-box .portlet-title {
+            color: black !important;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var currentTabId = "home";
+
+        var defWindowWidth = $(window).width();
+        var defWindowHeight = $(window).height();
+
+        var portalConf = {
+            bodyTagAddClass: "login-active ja SIW0001300 SIKakuteiSeisekiReferList",
+            funcId: "SIW0001300",
+            viewName: "SIKakuteiSeisekiReferList",
+            page: "main",
+            lang: "ja",
+            locale: "ja_JP",
+            localeJa: true,
+            localeEn: false,
+            isDeviceLocaleSmartphone: false,
+            runMode: "",
+            templateTabId: "home",
+            portalUrl: "portal.do",
+            webUrl: "campussquare.do",
+            rwfHash: "2367cf2d620d9594cacd2d7a628ce0f4",
+            staticHtmlDir: "/campusweb/static/pub/",
+            staticCampusDir: "/campusweb/static/pub/campus/6.0/",
+            staticImageDir: "/campusweb/static/pub/campus/6.0/image/",
+        };
+
+        var portalMenuDispFlg = !window.opener && true;
+
+        $(function() {
+            $(window).resize(function() {
+                $("#page-main").css({
+                    cssText: "margin-top: " +
+                        $("#page-header").outerHeight() +
+                        "px !important",
+                });
+
+                if ($(window).width() > 600) {
+                    let mw = 0;
+                    $("#page-main table").each(function() {
+                        let tw = $(this).width();
+                        if (tw > mw) {
+                            mw = tw;
+                        }
+                    });
+                    if (mw > $("#page-main > div.container").width()) {
+                        $("#page-main > div.container").css("min-width", mw + 40 + "px");
+                    }
+                } else {
+                    $("#page-main > div.container").css("min-width", "");
+                }
+            });
+
+            if (!portalMenuDispFlg) {
+                $("#page-header").addClass("no-portal-menu");
+                $("#page-main").css({
+                    cssText: "margin-top: " +
+                        $("#page-header").outerHeight() +
+                        "px !important",
+                });
+            }
+
+            if ($(window).width() > 600) {
+                let mw = 0;
+                $("#page-main table").each(function() {
+                    let tw = $(this).width();
+                    if (tw > mw) {
+                        mw = tw;
+                    }
+                });
+                if (mw > $("#page-main > div.container").width()) {
+                    $("#page-main > div.container").css("min-width", mw + 40 + "px");
+                }
+            }
+        });
+    </script>
+    <script language="JavaScript">
+        <!--
+
+        function callIndicate() {
+            document.BackForm._eventId.value = "eventBackIndicate";
+            document.BackForm.submit();
+            return false;
+        }
+        //-->
+    </script>
+    <style type="text/css" id="tts-styles">
+        [data-tts-block-id].tts-active {
+            background: rgba(206, 225, 255, 0.9) !important;
+        }
+        
+        [data-tts-sentence-id].tts-active {
+            background: rgba(0, 89, 191, 0.7) !important;
+        }
+    </style>
+</head>
+
+<body class="page-body body-flow cmps theme body login-active ja SIW0001300 SIKakuteiSeisekiReferList vsc-initialized" id="page-body">
+    <div id="test-vw100"></div>
+    <div id="test-vh100"></div>
+
+    <div id="portlet-setting-param-dlg" class="portal-setting-dlg">
+        <div class="loading" id="portal-setting-param-dlg-box-loading"></div>
+        <div id="portal-setting-param-dlg-box"></div>
+    </div>
+
+    <div id="campus-loading-overlay" class="campus-loading-overlay" style="display: none"></div>
+    <div id="campus-loading" class="campus-loading" style="display: none">
+        <div id="campus-loading-msg" class="campus-loading-msg" style="margin-left: 747.5px; opacity: 0.8">
+            Loading...
+            <a id="campus-loading-cancel" class="campus-loading-cancel btn-flat waves-effect waves-light" href="javascript:void(0);" onclick="stopLoading();" title="Close"><i class="material-icons">close</i></a
+        >
+        <div class="spinner-wrapper"></div>
+      </div>
+      <div
+        id="campus-loading-err"
+        class="campus-loading-msg err"
+        style="display: none"
+      >
+        画面の表示に失敗しました<br /><br /><a
+          class="btn-flat waves-effect waves-light"
+          href="javascript:void(0);"
+          onclick="stopLoading();"
+          title="閉じる"
+          ><i class="material-icons">close</i>閉じる</a
+        >
+      </div>
+    </div>
+
+    <header
+      id="page-header"
+      class="page-header fixed cmps theme header login-active ja SIW0001300 SIKakuteiSeisekiReferList"
+    >
+      <div class="container clearfix">
+        <div class="row no-margin">
+          <div
+            class="col s12 no-margin no-padding clearfix"
+            style="line-height: normal"
+          ></div>
+        </div>
+
+        <nav id="top-nav" class="navbar-fixed cmps theme header">
+          <div class="nav-wrapper">
+            <section class="page-title">
+              <div class="row no-margin">
+                <div
+                  class="breadcrumb-box col s12 no-margin no-padding clearfix"
+                  style="line-height: 40px; height: 40px"
+                >
+                  <a
+                    id="breadcrumb-1"
+                    class="breadcrumb"
+                    href="portal.do?page=main"
+                    title="HOME"
+                    >HOME</a
+                  >
+                  <a
+                    id="breadcrumb-2"
+                    class="breadcrumb"
+                    href="portal.do?page=main&amp;tabId=kyomu&amp;link=menu-link-mt-top-kyomu"
+                    title="教務／授業関連"
+                    style=""
+                    >教務／授業関連</a
+                  >
+                  <div class="sidenav-btn hide-on-large-only">
+                    <!-- hide-on-large-only  show-on-large">-->
+                    <a
+                      id="sidenav-trigger"
+                      class="sidenav-trigger btn-floating waves-effect waves-light"
+                      data-target="sidenav-menu-wrapper"
+                      alt="MENU"
+                      href="javascript:void(0);"
+                      ><i class="material-icons">menu</i></a
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="col s12 no-margin no-padding title clearfix"
+                  style="line-height: 36px"
+                >
+                  <img
+                    class="page-icon"
+                    src="/campusweb/static/pub/campus/6.0/image/icon/list.png"
+                  /><span class="main">単位修得状況照会</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main
+      id="page-main"
+      class="page-main cmps theme main login-active ja SIW0001300 SIKakuteiSeisekiReferList"
+      style="margin-top: 95.7812px !important"
+    >
+      <div class="container clearfix">
+        <aside id="sidebar-nav">
+          <div
+            id="sidenav-menu-wrapper"
+            class="sidenav sidenav-fixed ps-scroll cmps theme menu clearfix ps ps--active-y"
+            style="transform: translateX(0%)"
+          >
+            <div
+              id="sidenav-menu"
+              class="sidenav-menu menu-accordion multi-open clearfix"
+            >
+              <div
+                id="sidenav-menu-header"
+                class="sidenav-menu-header clearfix"
+              >
+                <!-- <div class="system-logo"><img src="/campusweb/static/pub/campus/6.0/image/menu_logo.png"></div> -->
+                <div
+                  class="system-logo"
+                  style="font-size: 200%; font-weight: bold"
+                >
+                  <i
+                    class="fas fa-cube"
+                    style="margin-left: 1em; color: #77e7f7"
+                  ></i>
+                  <span
+                    ><span style="color: #77e7f7">C</span>AMPUS<span
+                      style="color: #77e7f7"
+                      >S</span
+                    >QUARE</span
+                  >
+                </div>
+
+                <div id="system-menu" class="row top system-menu">
+                  <div id="system-menu-row1" class="row row1">
+                    <div id="system-menu-user" class="col s6 system-menu-user">
+                      <img
+                        alt="MYアカウント"
+                        src="/campusweb/static/pub/campus/6.0/image/icon/user.png"
+                      /><i class="fas fa-user-circle"></i><br />
+                      <span class="user-name">叶　京平</span>
+                    </div>
+                    <div
+                      id="system-menu-logout"
+                      class="col s6 system-menu-logout"
+                    >
+                      <a
+                        id="portallogout"
+                        title="ログアウト"
+                        class="logout btn-medium waves-effect waves-light"
+                        href="portal.do?page=logout"
+                        onclick="if(confirm('ログアウトしてもよろしいですか？')){ return true; } else { return false; }"
+                      >
+                        <img
+                          alt="ログアウト"
+                          src="/campusweb/static/pub/campus/6.0/image/icon/logout.png"
+                        /><i class="fas fa-sign-out-alt"></i><br />
+                        ログアウト
+                      </a>
+        </div>
+    </div>
+
+    <div id="system-menu-row2" class="row row2">
+        <div id="system-menu-timer" class="col s12 system-menu-timer">
+            <a id="portaltimer" title="クリックで延長" class="timeout btn-medium waves-effect waves-light" href="javascript:void(0);">
+                <img alt="クリックで延長" src="/campusweb/static/pub/campus/6.0/image/icon/portal_timeout.png" /><i class="fas fa-hourglass-half"></i><br />
+                <span>残り<span id="timeout-timer">38</span>分</span>
+            </a>
+        </div>
+    </div>
+    </div>
+
+    <form name="TopForm" style="margin: 0px; padding: 0px" action="campussquare.do">
+        <input type="hidden" name="time_cnt" value="0" />
+        <input type="hidden" name="_eventId" />
+        <input type="hidden" name="_flowExecutionKey" />
+        <input type="hidden" name="timeout" id="timeout" value="38" />
+    </form>
+    <script type="text/javascript">
+        var session_time_out_timer = 0;
+        var session_last_acc_time = new Date();
+        var before_odd_time = 0;
+
+        var session_time_out = 60;
+
+        function checkTimeout() {
+            now = new Date();
+            t = now.getTime() - session_last_acc_time.getTime();
+            var minute_cnt = Math.floor(t / (60 * 1000));
+            if (minute_cnt < session_time_out) {
+                var odd_time = session_time_out - minute_cnt;
+                document.TopForm.timeout.value = odd_time;
+
+                $("#timeout-timer").text(odd_time);
+
+                $("#portaltimer").unbind("click");
+                $("#portaltimer").click(function() {
+                    extendSession();
+                });
+
+                if (session_time_out_timer == 0) {
+                    session_time_out_timer = setInterval(
+                        "checkTimeout()",
+                        2000
+                    );
+                }
+
+                if ("5" != "" && before_odd_time != odd_time) {
+                    if ("5" == odd_time + "") {
+                        var SubWin = window.open(
+                            "/campusweb/theme/default/TimeoutAlert.html",
+                            "",
+                            "width=750,height=240,location=0,menubar=0,scrollbars=1,resizable=1,toolbar=0"
+                        );
+                    }
+                }
+                before_odd_time = odd_time;
+            } else {
+                clearInterval(session_time_out_timer);
+                session_time_out_timer = 0;
+                document.TopForm.timeout.value = "0";
+
+                $("#timeout-timer").text("0");
+
+                $("#portaltimer").unbind("click");
+
+                if (true) {
+                    var msg = "タイムアウトしました。";
+                    if (msg == "") {
+                        msg = "タイムアウトしました。";
+                    }
+                    alert(msg);
+                }
+                if (true) {
+                    var SubWin = window.open(
+                        "/campusweb/theme/default/Timeout.html",
+                        "",
+                        "width=750,height=240,location=0,menubar=0,scrollbars=1,resizable=1,toolbar=0"
+                    );
+                }
+            }
+        }
+
+        function initTimeout() {
+            if (true) {
+                document.TopForm.time_cnt.value = "0";
+                clearInterval(session_time_out_timer);
+                session_time_out_timer = 0;
+                session_last_acc_time = new Date();
+                before_odd_time = 0;
+                checkTimeout();
+            }
+        }
+
+        function extendSession() {
+            var url = getAjaxGetUrl("dummy", null);
+            $.get(url);
+            initTimeout();
+        }
+
+        $(document).ready(function() {
+            initTimeout();
+        });
+    </script>
+
+    <div id="menu-header" class="submenu-bar top menu-header"></div>
+    </div>
+
+    <div id="sidenav-menu-body" class="sidenav-menu-body clearfix">
+        <div id="menu-body" class="submenu-bar top menu-body">
+            <div class="menu-top-new">
+                <a class="btn-medium waves-effect waves-light" id="menu-link-mw-001" href="portal.do?page=main&amp;action=rwf&amp;tabId=home&amp;wfId=main_PTW0065200_menu&amp;rwfHash=2367cf2d620d9594cacd2d7a628ce0f4&amp;link=menu-link-mw-001" title="新着情報があります"><img alt="新着情報があります" src="/campusweb/static/pub/campus/6.0/image/icon/dialog-information-3.png" />新着情報があります<span class="new badge"></span
+                    ></a>
+                  </div>
+
+                  <div id="menu-tabs" class="menu-tabs clearfix">
+                    <ul class="tabs m-tabs tabs-fixed-width">
+                      <li id="menu-tabs-menu" class="tab">
+                        <a
+                          class="waves-effect waves-light active"
+                          href="#menu-all"
+                          title="メニュー"
+                        >
+                          <img
+                            alt="メニュー"
+                            src="/campusweb/static/pub/campus/6.0/image/icon/format-list-ordered.png"
+                          />
+                          <i class="fas fa-bars"></i>
+                          メニュー</a
+                        >
+                      </li>
+
+                      <li class="indicator" style="left: 0px; right: 0px"></li>
+                    </ul>
+                  </div>
+
+                  <div id="menu-contents" class="menu-contents">
+                    <div
+                      id="menu-all"
+                      class="menu-content menu-all clearfix active"
+                    >
+                      <div class="header">
+                        <img
+                          alt="メニュー"
+                          src="/campusweb/static/pub/campus/6.0/image/icon/format-list-ordered.png"
+                        /><i class="fas fa-bars"></i>メニュー
+                        <!--                     <a class="tool-btn open" class="btn-medium waves-effect waves-light" href="javascript:void(0);" onclick="openAllMenus(); return false;"><i class="material-icons">add_circle</i></a> -->
+                        <!--                     <a class="tool-btn close" class="btn-medium waves-effect waves-light" href="javascript:void(0);" onclick="closeAllMenus(); return false;"><i class="material-icons">remove_circle</i></a> -->
+                      </div>
+
+                      <ul id="menu-all-list" class="menu-all-list">
+                        <li id="menu-tab-home" class="menu-tab">
+                          <a
+                            class="tab-link next btn-medium waves-effect waves-light"
+                            id="menu-link-mt-home"
+                            href="portal.do?page=main&amp;tabId=home&amp;link=mt16725"
+                            title="HOME"
+                            ><img
+                              alt="HOME"
+                              src="/campusweb/static/pub/campus/6.0/image/icon/go-home-2.png"
+                            /><span class="tabnm">HOME</span>
+                </a>
+                </li>
+
+                <li id="menu-tab-pt" class="menu-tab menu-tab-dir1">
+                    <a class="tab-link btn-medium waves-effect waves-light" id="menu-link-mt-pt" href="javascript:void(0);" title="ポータル"><img alt="ポータル" src="/campusweb/static/pub/campus/6.0/image/icon/campussquare-icon.png" /><span class="tabnm">ポータル</span
+                            ><span class="arrow"></span>
+                    </a>
+                    <div class="menu-tab-dir1-div">
+                        <ul id="menu-tab-ul-pt" class="menu-sub-list">
+                            <li id="menu-tab-header-msg-pt" class="menu-tab-header">
+                                <a class="next btn-medium waves-effect waves-light" href="portal.do?page=main&amp;tabId=pt&amp;link=menu-link-mt-top-pt" id="menu-link-mt-top-pt" title="ポータル TOPページ">
+                                    <span class="title">TOPページ</span
+                                  ><span class="title-hint"
+                                    >お知らせはこちら</span
+                                  >
+                                </a>
+                              </li>
+
+                              <li class="menu-portlet">
+                                <a
+                                  class="next btn-medium waves-effect waves-light"
+                                  id="menu-link-mp-141358"
+                                  target=""
+                                  href="portal.do?page=main&amp;action=rwf&amp;tabId=pt&amp;wfId=main_PTW0065200_menu&amp;rwfHash=2367cf2d620d9594cacd2d7a628ce0f4&amp;link=menu-link-mp-141358"
+                                  title="新着情報"
+                                  data-func="PTW0065200"
+                                  ><img
+                                    alt="新着情報"
+                                    src="/campusweb/static/pub/campus/6.0/image/icon/dialog-information-3.png"
+                                  /><span class="menunm">新着情報</span></a>
+                            </li>
+
+                            <li class="menu-portlet">
+                                <a class="next btn-medium waves-effect waves-light" id="menu-link-mp-141359" target="" href="portal.do?page=main&amp;action=rwf&amp;tabId=pt&amp;wfId=main_PTW0065300_menu&amp;rwfHash=2367cf2d620d9594cacd2d7a628ce0f4&amp;link=menu-link-mp-141359" title="新着掲示"
+                                    data-func="PTW0065300"><img alt="新着掲示" src="/campusweb/static/pub/campus/6.0/image/icon/keiji.png" /><span class="menunm">新着掲示</span></a>
+                            </li>
+
+                            <li id="menu-tab-dir2-1" class="menu-tab-dir2">
+                                <a class="dir-link btn-medium waves-effect waves-light" href="javascript:void(0);" title="管理メニュー"><span
+                                    ><img
+                                      alt="管理メニュー"
+                                      src="/campusweb/static/pub/campus/6.0/image/icon/menu_folder.png"
+                                    /><span class="foldernm"
+                                      >管理メニュー</span
+                                    ></span
+                                  ><span class="arrow"></span
+                                ></a>
+                                <div class="menu-tab-dir2-div" style="">
+                                    <ul id="menu-tab-moresubul-1" class="">
+                                        <li class="menu-func">
+                                            <a class="next btn-medium waves-effect waves-light" id="menu-link-mf-141361" target="" href="campussquare.do?_flowId=PTW0001100-flow&amp;link=menu-link-mf-141361" title="リンク登録" data-func="PTW0001100"><img alt="リンク登録" src="/campusweb/static/pub/campus/6.0/image/icon/edit-4.png" /><span class="menunm">リンク登録</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-close">
+                                      <a
+                                        class="btn-medium waves-effect waves-light"
+                                        href="javascript:void(0);"
+                                        title="close"
+                                        ><i class="material-icons">close</i
+                                        >close</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <li class="menu-close">
+                                <a
+                                  class="btn-medium waves-effect waves-light"
+                                  title="close"
+                                  href="javascript:void(0);"
+                                  ><i class="material-icons">close</i>close</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li id="menu-tab-kj" class="menu-tab menu-tab-dir1">
+                          <a
+                            class="tab-link btn-medium waves-effect waves-light"
+                            id="menu-link-mt-kj"
+                            href="javascript:void(0);"
+                            title="掲示・アンケート"
+                            ><img
+                              alt="掲示・アンケート"
+                              src="/campusweb/static/pub/campus/6.0/image/icon/tab_keiji.png"
+                            /><span class="tabnm">掲示・アンケート</span
+                            ><span class="arrow"></span>
+                                            </a>
+                                            <div class="menu-tab-dir1-div">
+                                                <ul id="menu-tab-ul-kj" class="menu-sub-list">
+                                                    <li id="menu-tab-header-msg-kj" class="menu-tab-header">
+                                                        <a class="next btn-medium waves-effect waves-light" href="portal.do?page=main&amp;tabId=kj&amp;link=menu-link-mt-top-kj" id="menu-link-mt-top-kj" title="掲示・アンケート TOPページ">
+                                                            <span class="title">TOPページ</span
+                                  ><span class="title-hint"
+                                    >お知らせはこちら</span
+                                  >
+                                </a>
+                              </li>
+
+                              <li
+                                id="menu-tab-dir2-2"
+                                class="menu-tab-dir2 open"
+                              >
+                                <a
+                                  class="dir-link btn-medium waves-effect waves-light open"
+                                  href="javascript:void(0);"
+                                  title="掲示板"
+                                  ><span
+                                    ><img
+                                      alt="掲示板"
+                                      src="/campusweb/static/pub/campus/6.0/image/icon/menu_folder.png"
+                                    /><span class="foldernm">掲示板</span></span><span class="arrow"></span
+                                ></a>
+                                <div
+                                  class="menu-tab-dir2-div open"
+                                  style="display: block"
+                                >
+                                  <ul id="menu-tab-moresubul-2" class="">
+                                    <li class="menu-portlet">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light"
+                                        id="menu-link-mp-141363"
+                                        target=""
+                                        href="portal.do?page=main&amp;action=rwf&amp;tabId=kj&amp;wfId=main_PTW0065300_menu&amp;rwfHash=2367cf2d620d9594cacd2d7a628ce0f4&amp;link=menu-link-mp-141363"
+                                        title="新着掲示"
+                                        data-func="PTW0065300"
+                                        ><img
+                                          alt="新着掲示"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/keiji.png"
+                                        /><span class="menunm"
+                                          >新着掲示</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-func">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light"
+                                        id="menu-link-mf-141364"
+                                        target=""
+                                        href="campussquare.do?_flowId=KJW0001100-flow&amp;link=menu-link-mf-141364"
+                                        title="掲示板"
+                                        data-func="KJW0001100"
+                                        ><img
+                                          alt="掲示板"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/refer2.png"
+                                        /><span class="menunm">掲示板</span></a>
+                                                    </li>
+
+                                                    <li class="menu-close">
+                                                        <a class="btn-medium waves-effect waves-light" href="javascript:void(0);" title="close"><i class="material-icons">close</i
+                                        >close</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <li id="menu-tab-dir2-3" class="menu-tab-dir2">
+                                <a
+                                  class="dir-link btn-medium waves-effect waves-light"
+                                  href="javascript:void(0);"
+                                  title="授業評価アンケート"
+                                  ><span
+                                    ><img
+                                      alt="授業評価アンケート"
+                                      src="/campusweb/static/pub/campus/6.0/image/icon/menu_folder.png"
+                                    /><span class="foldernm"
+                                      >授業評価アンケート</span
+                                    ></span
+                                  ><span class="arrow"></span
+                                ></a>
+                                                        <div class="menu-tab-dir2-div" style="">
+                                                            <ul id="menu-tab-moresubul-3" class="">
+                                                                <li class="menu-func">
+                                                                    <a class="next btn-medium waves-effect waves-light" id="menu-link-mf-141366" target="" href="campussquare.do?_flowId=CEW7403000-flow&amp;link=menu-link-mf-141366" title="授業評価アンケート回答" data-func="CEW7403000"><img alt="授業評価アンケート回答" src="/campusweb/static/pub/campus/6.0/image/icon/sp.gif" /><span class="menunm">授業評価アンケート回答</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-close">
+                                      <a
+                                        class="btn-medium waves-effect waves-light"
+                                        href="javascript:void(0);"
+                                        title="close"
+                                        ><i class="material-icons">close</i
+                                        >close</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <li class="menu-close">
+                                <a
+                                  class="btn-medium waves-effect waves-light"
+                                  title="close"
+                                  href="javascript:void(0);"
+                                  ><i class="material-icons">close</i>close</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li id="menu-tab-gk" class="menu-tab menu-tab-dir1">
+                          <a
+                            class="tab-link btn-medium waves-effect waves-light"
+                            id="menu-link-mt-gk"
+                            href="javascript:void(0);"
+                            title="学生生活"
+                            ><img
+                              alt="学生生活"
+                              src="/campusweb/static/pub/campus/6.0/image/icon/tab_chart.png"
+                            /><span class="tabnm">学生生活</span
+                            ><span class="arrow"></span>
+                                                                    </a>
+                                                                    <div class="menu-tab-dir1-div">
+                                                                        <ul id="menu-tab-ul-gk" class="menu-sub-list">
+                                                                            <li id="menu-tab-header-msg-gk" class="menu-tab-header">
+                                                                                <a class="next btn-medium waves-effect waves-light" href="portal.do?page=main&amp;tabId=gk&amp;link=menu-link-mt-top-gk" id="menu-link-mt-top-gk" title="学生生活 TOPページ">
+                                                                                    <span class="title">TOPページ</span
+                                  ><span class="title-hint"
+                                    >お知らせはこちら</span
+                                  >
+                                </a>
+                              </li>
+
+                              <li class="menu-func">
+                                <a
+                                  class="next btn-medium waves-effect waves-light"
+                                  id="menu-link-mf-141367"
+                                  target=""
+                                  href="campussquare.do?_flowId=CHW0001000-flow&amp;link=menu-link-mf-141367"
+                                  title="学生情報参照"
+                                  data-func="CHW0001000"
+                                  ><img
+                                    alt="学生情報参照"
+                                    src="/campusweb/static/pub/campus/6.0/image/icon/chart.png"
+                                  /><span class="menunm">学生情報参照</span></a>
+                                                                            </li>
+
+                                                                            <li class="menu-func">
+                                                                                <a class="next btn-medium waves-effect waves-light" id="menu-link-mf-141368" target="" href="campussquare.do?_flowId=CHW7402000-flow&amp;link=menu-link-mf-141368" title="身上調査情報登録" data-func="CHW7402000"><img alt="身上調査情報登録" src="/campusweb/static/pub/campus/6.0/image/icon/func_entry_green2.gif" /><span class="menunm">身上調査情報登録</span
+                                  ></a
+                                >
+                              </li>
+
+                              <li id="menu-tab-dir2-4" class="menu-tab-dir2">
+                                <a
+                                  class="dir-link btn-medium waves-effect waves-light"
+                                  href="javascript:void(0);"
+                                  title="安否確認"
+                                  ><span
+                                    ><img
+                                      alt="安否確認"
+                                      src="/campusweb/static/pub/campus/6.0/image/icon/menu_folder.png"
+                                    /><span class="foldernm"
+                                      >安否確認</span
+                                    ></span
+                                  ><span class="arrow"></span
+                                ></a>
+                                <div class="menu-tab-dir2-div" style="">
+                                  <ul id="menu-tab-moresubul-4" class="">
+                                    <li class="menu-func">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light"
+                                        id="menu-link-mf-141373"
+                                        target=""
+                                        href="campussquare.do?_flowId=ANW0001900-flow&amp;link=menu-link-mf-141373"
+                                        title="安否確認メールアドレス登録"
+                                        data-func="ANW0001900"
+                                        ><img
+                                          alt="安否確認メールアドレス登録"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/dialog-warning-3.png"
+                                        /><span class="menunm"
+                                          >安否確認メールアドレス登録</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-close">
+                                      <a
+                                        class="btn-medium waves-effect waves-light"
+                                        href="javascript:void(0);"
+                                        title="close"
+                                        ><i class="material-icons">close</i
+                                        >close</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <li class="menu-close">
+                                <a
+                                  class="btn-medium waves-effect waves-light"
+                                  title="close"
+                                  href="javascript:void(0);"
+                                  ><i class="material-icons">close</i>close</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li
+                          id="menu-tab-kyomu"
+                          class="menu-tab menu-tab-dir1 open"
+                        >
+                          <a
+                            class="tab-link btn-medium waves-effect waves-light open"
+                            id="menu-link-mt-kyomu"
+                            href="javascript:void(0);"
+                            title="教務／授業関連"
+                            ><img
+                              alt="教務／授業関連"
+                              src="/campusweb/static/pub/campus/6.0/image/icon/rishu.png"
+                            /><span class="tabnm">教務／授業関連</span
+                            ><span class="arrow"></span>
+                                                                                </a>
+                                                                                <div class="menu-tab-dir1-div open">
+                                                                                    <ul id="menu-tab-ul-kyomu" class="menu-sub-list">
+                                                                                        <li id="menu-tab-header-msg-kyomu" class="menu-tab-header">
+                                                                                            <a class="next btn-medium waves-effect waves-light" href="portal.do?page=main&amp;tabId=kyomu&amp;link=menu-link-mt-top-kyomu" id="menu-link-mt-top-kyomu" title="教務／授業関連 TOPページ">
+                                                                                                <span class="title">TOPページ</span
+                                  ><span class="title-hint"
+                                    >お知らせはこちら</span
+                                  >
+                                </a>
+                              </li>
+
+                              <li id="menu-tab-dir2-5" class="menu-tab-dir2">
+                                <a
+                                  class="dir-link btn-medium waves-effect waves-light"
+                                  href="javascript:void(0);"
+                                  title="シラバス"
+                                  ><span
+                                    ><img
+                                      alt="シラバス"
+                                      src="/campusweb/static/pub/campus/6.0/image/icon/menu_folder.png"
+                                    /><span class="foldernm"
+                                      >シラバス</span
+                                    ></span
+                                  ><span class="arrow"></span
+                                ></a>
+                                <div class="menu-tab-dir2-div" style="">
+                                  <ul id="menu-tab-moresubul-5" class="">
+                                    <li class="menu-func">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light"
+                                        id="menu-link-mf-141378"
+                                        target=""
+                                        href="campussquare.do?_flowId=SBW3701300-flow&amp;link=menu-link-mf-141378"
+                                        title="シラバス参照"
+                                        data-func="SBW3701300"
+                                        ><img
+                                          alt="シラバス参照"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/refer2.png"
+                                        /><span class="menunm"
+                                          >シラバス参照</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-close">
+                                      <a
+                                        class="btn-medium waves-effect waves-light"
+                                        href="javascript:void(0);"
+                                        title="close"
+                                        ><i class="material-icons">close</i
+                                        >close</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <li id="menu-tab-dir2-6" class="menu-tab-dir2">
+                                <a
+                                  class="dir-link btn-medium waves-effect waves-light"
+                                  href="javascript:void(0);"
+                                  title="履修"
+                                  ><span
+                                    ><img
+                                      alt="履修"
+                                      src="/campusweb/static/pub/campus/6.0/image/icon/menu_folder.png"
+                                    /><span class="foldernm">履修</span></span><span class="arrow"></span
+                                ></a>
+                                <div class="menu-tab-dir2-div" style="">
+                                  <ul id="menu-tab-moresubul-6" class="">
+                                    <li class="menu-func">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light"
+                                        id="menu-link-mf-141379"
+                                        target=""
+                                        href="campussquare.do?_flowId=RSW0001000-flow&amp;link=menu-link-mf-141379"
+                                        title="履修登録"
+                                        data-func="RSW0001000"
+                                        ><img
+                                          alt="履修登録"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/edit-4.png"
+                                        /><span class="menunm"
+                                          >履修登録</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-func">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light"
+                                        id="menu-link-mf-141380"
+                                        target=""
+                                        href="campussquare.do?_flowId=HTW0001000-flow&amp;link=menu-link-mf-141380"
+                                        title="自己判定"
+                                        data-func="HTW0001000"
+                                        ><img
+                                          alt="自己判定"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/dialog-ok-3.png"
+                                        /><span class="menunm"
+                                          >自己判定</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-close">
+                                      <a
+                                        class="btn-medium waves-effect waves-light"
+                                        href="javascript:void(0);"
+                                        title="close"
+                                        ><i class="material-icons">close</i
+                                        >close</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <li id="menu-tab-dir2-7" class="menu-tab-dir2">
+                                <a
+                                  class="dir-link btn-medium waves-effect waves-light"
+                                  href="javascript:void(0);"
+                                  title="教職履修カルテ"
+                                  ><span
+                                    ><img
+                                      alt="教職履修カルテ"
+                                      src="/campusweb/static/pub/campus/6.0/image/icon/menu_folder.png"
+                                    /><span class="foldernm"
+                                      >教職履修カルテ</span
+                                    ></span
+                                  ><span class="arrow"></span
+                                ></a>
+                                <div class="menu-tab-dir2-div" style="">
+                                  <ul id="menu-tab-moresubul-7" class="">
+                                    <li class="menu-func">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light"
+                                        id="menu-link-mf-141384"
+                                        target=""
+                                        href="campussquare.do?_flowId=RCW0001000-flow&amp;link=menu-link-mf-141384"
+                                        title="取得予定教員免許状申請"
+                                        data-func="RCW0001000"
+                                        ><img
+                                          alt="取得予定教員免許状申請"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/edit-4.png"
+                                        /><span class="menunm"
+                                          >取得予定教員免許状申請</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-func">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light"
+                                        id="menu-link-mf-141385"
+                                        target=""
+                                        href="campussquare.do?_flowId=RCW0001100-flow&amp;link=menu-link-mf-141385"
+                                        title="教職関連科目修得状況確認"
+                                        data-func="RCW0001100"
+                                        ><img
+                                          alt="教職関連科目修得状況確認"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/list.png"
+                                        /><span class="menunm"
+                                          >教職関連科目修得状況確認</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-func">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light"
+                                        id="menu-link-mf-141386"
+                                        target=""
+                                        href="campussquare.do?_flowId=RCW0001300-flow&amp;link=menu-link-mf-141386"
+                                        title="自己評価シート入力"
+                                        data-func="RCW0001300"
+                                        ><img
+                                          alt="自己評価シート入力"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/edit-4.png"
+                                        /><span class="menunm"
+                                          >自己評価シート入力</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-close">
+                                      <a
+                                        class="btn-medium waves-effect waves-light"
+                                        href="javascript:void(0);"
+                                        title="close"
+                                        ><i class="material-icons">close</i
+                                        >close</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <li
+                                id="menu-tab-dir2-8"
+                                class="menu-tab-dir2 open"
+                              >
+                                <a
+                                  class="dir-link btn-medium waves-effect waves-light open"
+                                  href="javascript:void(0);"
+                                  title="成績"
+                                  ><span
+                                    ><img
+                                      alt="成績"
+                                      src="/campusweb/static/pub/campus/6.0/image/icon/menu_folder.png"
+                                    /><span class="foldernm">成績</span></span><span class="arrow"></span
+                                ></a>
+                                <div class="menu-tab-dir2-div open" style="">
+                                  <ul id="menu-tab-moresubul-8" class="">
+                                    <li class="menu-func">
+                                      <a
+                                        class="next btn-medium waves-effect waves-light active"
+                                        id="menu-link-mf-141390"
+                                        target=""
+                                        href="campussquare.do?_flowId=SIW0001300-flow&amp;link=menu-link-mf-141390"
+                                        title="単位修得状況照会"
+                                        data-func="SIW0001300"
+                                        ><img
+                                          alt="単位修得状況照会"
+                                          src="/campusweb/static/pub/campus/6.0/image/icon/list.png"
+                                        /><span class="menunm"
+                                          >単位修得状況照会</span
+                                        ></a
+                                      >
+                                    </li>
+
+                                    <li class="menu-close">
+                                      <a
+                                        class="btn-medium waves-effect waves-light"
+                                        href="javascript:void(0);"
+                                        title="close"
+                                        ><i class="material-icons">close</i
+                                        >close</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <li class="menu-close">
+                                <a
+                                  class="btn-medium waves-effect waves-light"
+                                  title="close"
+                                  href="javascript:void(0);"
+                                  ><i class="material-icons">close</i>close</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="sidenav-menu-footer"
+                class="sidenav-menu-footer clearfix"
+              >
+                <div id="menu-footer" class="submenu-bar top menu-footer"></div>
+              </div>
+            </div>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px">
+              <div
+                class="ps__thumb-x"
+                tabindex="0"
+                style="left: 0px; width: 0px"
+              ></div>
+            </div>
+            <div
+              class="ps__rail-y"
+              style="top: 0px; right: 0px; height: 1007px"
+            >
+              <div
+                class="ps__thumb-y"
+                tabindex="0"
+                style="top: 0px; height: 964px"
+              ></div>
+            </div>
+          </div>
+        </aside>
+        <!-- 左サイドバーメニュー終わり -->
+
+        <!-- メインコンテンツ #main-wrapper -->
+        <div id="main-wrapper-loading" style="display: none">
+          <div id="main-wrapper-loading-msg">
+            <i class="fas fa-spinner fa-spin"></i>Loading, Please Wait
+          </div>
+          <div id="main-wrapper-loading-err">
+            画面の表示に失敗しました
+            <br /><br /><br />
+            <a
+              class="btn waves-effect waves-light mr2"
+              href="javascript:void(0);"
+              onclick="history.back();return false;"
+              title="BACK"
+              ><i class="fas fa-reply"></i>BACK</a
+            >
+            <a
+              class="btn waves-effect waves-light"
+              href="portal.do?page=main"
+              title="HOME"
+              ><i class="fas fa-home"></i>HOME</a
+            >
+          </div>
+        </div>
+        <div id="main-wrapper" class="main-wrapper clearfix" style="opacity: 1">
+          <!-- コンテンツ row -->
+          <div class="row no-margin no-padding clearfix">
+            <!-- コンテンツ col s12 -->
+            <div
+              class="col s12 no-margin no-padding clearfix"
+              style="overflow: hidden !important"
+            >
+              <div
+                id="func-page-header"
+                class="col s12 no-margin no-padding func-page-header"
+              ></div>
+
+              <!-- コンテンツ #main-func-body -->
+              <article id="main-func-body" class="main-func-body">
+                <p id="auto-p-1" class="auto-p-1"></p>
+
+                <table
+                  border="0"
+                  cellspacing="1"
+                  cellpadding="1"
+                  id="auto-table-1"
+                  class="auto-table-1 sp-table-none"
+                >
+                  <tbody>
+                    <tr class="seiseki">
+                      <th class="seiseki-head" height="25" width="100">氏名</th>
+                      <td width="200">叶　京平</td>
+                      <th class="seiseki-head" width="100">学籍番号</th>
+                      <td width="200">23F901115</td>
+                    </tr>
+                    <tr class="seiseki">
+                      <th class="seiseki-head" height="25">所属</th>
+                      <td>理工学部（通信教育課程）情報科学科</td>
+                      <th class="seiseki-head">学年</th>
+                      <td>3年</td>
+                    </tr>
+                    <tr class="seiseki">
+                      <th class="seiseki-head" height="25">年度・学期</th>
+                      <td>指示なし</td>
+                      <th class="seiseki-head">修得単位数</th>
+                      <td>56.0</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p id="auto-p-2" class="auto-p-2"></p>
+
+                <table
+                  border="0"
+                  cellspacing="1"
+                  cellpadding="1"
+                  style="white-space: normal; border-collapse: separate"
+                  id="UsunomiyaRuikeiGpaID"
+                  class="auto-table-2 sp-table-break"
+                >
+                  <tbody>
+                    <tr class="seiseki">
+                      <th class="seiseki-head" height="25" width="100">
+                        累計GPA
+                      </th>
+                      <td width="100">2.42</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p id="auto-p-3" class="auto-p-3"></p>
+
+                <div class="sp-table-scroll-box">
+                  <div class="sp-table-scroll-hint">
+                    <i class="fas fa-arrows-alt"></i
+                    ><span class="ja">スクロールします</span
+                    ><span class="en">Scroll here</span>
+                                                                                </div>
+                                                                                <div class="sp-table-scroll">
+                                                                                    <table border="1" cellspacing="0" cellpadding="1" width="100%" class="normal auto-table-3 sp-table-scroll" id="auto-table-3">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th width="40" height="25" class="seiseki-head">
+                                                                                                    No.
+                                                                                                </th>
+                                                                                                <th width="200" class="seiseki-head">科目大区分</th>
+                                                                                                <th width="200" class="seiseki-head">科目中区分</th>
+                                                                                                <th width="200" class="seiseki-head">科目小区分</th>
+                                                                                                <th width="350" class="seiseki-head">科目</th>
+                                                                                                <th width="120" class="seiseki-head">単位数</th>
+                                                                                                <th width="150" class="seiseki-head">修得年度</th>
+                                                                                                <th width="150" class="seiseki-head">修得学期</th>
+
+                                                                                                <th width="60" class="seiseki-head">評価</th>
+                                                                                                <th width="60" class="seiseki-head">合否</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">1</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>英語１</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">2</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>英語２</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">3</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>現代世界の政治経済</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">B</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">4</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>心理学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">5</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>心理学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">6</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>経済学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">7</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>人間関係論</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">8</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>データサイエンス・AI入門</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">9</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>データサイエンス・AI入門</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">10</td>
+                                                                                                <td>総合基礎科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>社会心理学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">11</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>情報基礎１</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">欠席</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">12</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>情報基礎１</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">13</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>基礎数学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">14</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>論理数学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">15</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>論理数学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">B</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">16</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>線形代数</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">D</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">17</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>線形代数</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">B</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">18</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>微分積分１</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">19</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>微分積分１</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">20</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>微分積分２</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">B</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">21</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>応用数学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">22</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>物理学１</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">B</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">23</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>幾何学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">S</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">24</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>グラフ理論</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">25</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>数理統計学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">B</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">26</td>
+                                                                                                <td>専門基礎</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>離散数学</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">27</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>プログラミング１</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">28</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>プログラミング１</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">29</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>プログラミング２</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">30</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>プログラミング２</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">B</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">31</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>プログラミング３</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">32</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>プログラミング４</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">33</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>情報科学演習１</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">34</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>必修</td>
+                                                                                                <td></td>
+                                                                                                <td>情報科学演習２</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">35</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>技術者倫理</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">無資格</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">36</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>技術者倫理</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">D</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">37</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>Ｗｅｂアプリケーション</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">A</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">38</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>Ｗｅｂ技術基礎</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">欠席</td>
+                                                                                                <td align="center">否</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">39</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>Ｗｅｂ技術基礎</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">40</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>オートマトンと計算理論</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">41</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>情報技術基礎</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2023</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">C</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+
+                                                                                            <tr onmouseout="TRMouseOut(this)" onmouseover="TRMouseOver(this)" style="">
+                                                                                                <td height="25" align="center">42</td>
+                                                                                                <td>専門科目</td>
+                                                                                                <td>選択</td>
+                                                                                                <td></td>
+                                                                                                <td>コンピュータネットワーク</td>
+                                                                                                <td>2.0</td>
+                                                                                                <td align="center">2024</td>
+                                                                                                <td align="center">後期</td>
+
+                                                                                                <td align="center">B</td>
+                                                                                                <td align="center">合</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                    </div>
+                                                                    <br />
+
+                                                                    <br />
+                                                                    <br />
+                                                                    </article>
+                                                                    <!-- コンテンツ #main-func-body 終わり -->
+
+                                                                    <div id="func-page-footer" class="col s12 no-margin no-padding func-page-footer"></div>
+                                                        </div>
+                                                        <!-- コンテンツ col s12 終わり -->
+                                            </div>
+                                            <!-- コンテンツ row 終わり -->
+
+                                            <!-- フッターコンテンツ row  -->
+                                            <!--
+          <div class="row">
+            <div class="col s12">
+            </div>
+          </div>
+          -->
+                                            <!-- フッターコンテンツ row 終わり  -->
+                                </div>
+                                <!-- メインコンテンツ #main-wrapper 終わり -->
+
+                                <!-- フッターナビ row  -->
+                                <!--
+    <div id="footer-nav" class="row">
+    </div>
+    -->
+                                <!-- フッターナビ row 終わり  -->
+                    </div>
+                    <!-- .container -->
+                    </main>
+                    <!-- メイン #page-main 終わり -->
+
+                    <div id="dummy-portlet-3s" class="display-none fixsize-3s"></div>
+                    <div id="dummy-portlet-2s" class="display-none fixsize-2s"></div>
+                    <div id="dummy-portlet-s" class="display-none fixsize-s"></div>
+                    <div id="dummy-portlet-m" class="display-none fixsize-m"></div>
+                    <div id="dummy-portlet-l" class="display-none fixsize-l"></div>
+
+                    <!-- ページフッター -->
+                    <footer id="page-footer" class="page-footer cmps theme footer login-active ja SIW0001300 SIKakuteiSeisekiReferList clearfix">
+                        <div class="container clearfix"></div>
+                    </footer>
+                    <!-- ページフッター終わり -->
+
+                    <div class="sidenav-overlay" style="display: none; opacity: 0"></div>
+                    <div class="drag-target"></div>
+                    <deepl-input-controller translate="no"></deepl-input-controller>
+</body>
+
+</html>
