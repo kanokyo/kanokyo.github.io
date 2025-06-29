@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import Test from "@/components/test";
 import Skills from "@/components/Skills";
 import Works from "@/components/Works";
-import Contact from "@/components/contact";
+import Contact from "@/components/Contact";
 import MailForm from "@/components/MailForm";
 
 export default function Home() {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "./ui/card";
 
-const FormList = [{ header: "お名前", placeholder }];
+// const FormList = [{ header: "お名前", placeholder }];
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
