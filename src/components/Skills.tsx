@@ -3,7 +3,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { motion } from "framer-motion";
 import { Separator } from "./ui/separator";
 
 const skills = [

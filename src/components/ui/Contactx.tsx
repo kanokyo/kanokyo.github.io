@@ -7,7 +7,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import Form from "./Contact-form";
-import { Separator } from "../../../prev/components/ui/separator";
+import { Separator } from "./separator";
 
 const Contactx = () => {
   return (
