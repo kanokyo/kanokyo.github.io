@@ -22,14 +22,21 @@ const works = [
   },
   {
     title: "apparel",
-    skills: ["Next.js", "TypeScript", "framer-motion", "tailwindcss"],
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "framer-motion",
+      "tailwindcss",
+      "Clark",
+      "stripe",
+    ],
     discription:
       "ファッションアイテムを紹介・販売するECサイト。レスポンシブデザインと直感的なUIで、スマホからでも快適にショッピングを楽しめます。",
     img: "/gua.jpg",
   },
   {
     title: "keibaAI",
-    skills: ["Next.js", "TypeScript", "framer-motion", "tailwindcss"],
+    skills: ["python", "lightgbm"],
     discription:
       "機械学習を活用して競馬のレース結果を予測するAIシステム。LightGBMを用いたモデルと豊富な特徴量で、高い精度を実現しました。",
     img: "/kamu.jpg",
@@ -38,7 +45,7 @@ const works = [
 
 const Works = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center" id="works">
+    <div className="min-h-screen flex flex-col justify-center z-30" id="works">
       <div className="mt-10 font-mono">
         <h1 className="font-bold text-3xl flex justify-center p-10 ">WORKs</h1>
         <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-5">

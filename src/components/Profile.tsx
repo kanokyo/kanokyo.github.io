@@ -6,17 +6,17 @@ import { Separator } from "./ui/separator";
 
 const Profile = () => {
   return (
-    <div className="font-mono">
-      <Card>
+    <div className="font-mono text-white">
+      <Card className="bg-white/10 backdrop-blur-xl border-white/50">
         <CardHeader>
-          <CardTitle className="text-2xl font-semibold text-black mb-4 flex justify-start items-center">
+          <CardTitle className="text-2xl font-semibold text-slate-300 mb-4 flex justify-start items-center">
             <User className="mr-2" />
             プロフィール
           </CardTitle>
           <Separator />
         </CardHeader>
         <CardContent className="pt-0">
-          <div className="flex flex-col sm:justify-end m-5 mt-0 space-y-10  mx-auto ">
+          <div className="flex flex-col sm:justify-end m-5 mt-0 space-y-10  mx-auto text-slate-300">
             {/* 名前 */}
             <div className="lg:flex justify-center items-center">
               <Imgs />

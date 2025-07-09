@@ -20,19 +20,19 @@ export default function YearSlider() {
 
   return (
     <div className="font-mono">
-      <Card>
+      <Card className="bg-white/90 backdrop-blur-xl border-black/50">
         <CardHeader className="pb-6">
           <CardTitle className="text-2xl font-semibold text-black mb-4 flex justify-start items-center ">
             <Calendar className="mr-2" />
             人生年表
           </CardTitle>
-          <Separator />
+          <Separator className="bg-black" />
         </CardHeader>
         <CardContent className="pt-0">
           <div className="flex flex-col items-center justify-center w-auto ">
             {/* 選択中の年 */}
             <h2
-              className={`text-2xl font-bold  mb-3 ${
+              className={`text-2xl   mb-3 ${
                 hasDescription(year) ? " font-bold text-blue-500" : "text-black"
               }`}
             >
@@ -53,9 +53,7 @@ export default function YearSlider() {
               <span className="">2027</span>
             </div>
 
-            {/* 説明文を横並びで全部表示 */}
             <div className="w-4/5 m-4 flex flex-col items-center space-y-3">
-              {/* <h3 className="text-lg font-semibold mb-4">年表一覧</h3> */}
               {Object.entries(descriptions).map(([y, desc]) => (
                 <span
                   key={y}

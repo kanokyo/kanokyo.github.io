@@ -20,29 +20,38 @@ const skills = [
   },
   {
     title: "バックエンド",
-    skills: ["Node.js", "Python", "PostgreSQL"],
+    skills: ["Node.js", "Python", "PostgreSQL", "Clerk"],
   },
   {
     title: "ツール・その他",
-    skills: ["Git", "GitHub", "VS Code", "Figma", "Docker", "Vercel"],
+    skills: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Figma",
+      "Docker",
+      "Vercel",
+      "supabase",
+      "stripe",
+    ],
   },
 ];
 
 const Skills = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center" id="skills">
+    <div className="min-h-screen flex flex-col justify-center z-30" id="skills">
       <div className="font-mono mt-10">
         <h1 className="font-bold text-3xl flex justify-center p-10">SKILLs</h1>
         <div className="grid sm:grid-cols-3 sm:grid-rows-1 gap-5 px-5">
           {skills.map((category, idx) => (
             <div key={idx}>
               <Card>
-                <CardHeader>
+                <CardHeader className="pb-0">
                   <CardTitle className="mb-4">{category.title}</CardTitle>
                   <Separator />
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mt-0">
                     {category.skills.map((skill, skillidx) => (
                       <div key={skillidx} className="flex flex-wrap gap-2">
                         <Badge

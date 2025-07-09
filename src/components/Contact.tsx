@@ -4,27 +4,24 @@ import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { ArrowRight, ChevronRight, Divide, Github, Mail } from "lucide-react";
+import { ChevronRight, Github, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import MailForm from "./MailForm";
 
 const Contact = () => {
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <div className="min-h-screen flex flex-col justify-center" id="contact">
+    <div className="flex flex-col" id="contact">
       <Dialog>
         <DialogTrigger>Contact</DialogTrigger>
         <DialogContent>
           <DialogHeader>
             <div className="flex justify-around gap-5 text-sm font-mono ">
-              <Link href="https://github.com/Ad4cat/">
+              <Link href="https://github.com/Ad4cat/" target="_blank">
                 <div className="flex space-x-1 group hover:cursor-pointer">
                   <Github />
                   <ChevronRight className="transform group-hover:translate-x-1 transition duration-300" />
@@ -49,16 +46,13 @@ const Contact = () => {
               <motion.div
                 className="overflow-hidden bg-gray-50 rounded-lg shadow-lg mt-4"
                 layout
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "13rem" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
               >
                 <div className="p-4">
-                  <p>ここに開いたときの内容を入れます。</p>
-                  <p>
-                    閉じるときもスムーズにフェードアウト＋スライドクローズ。
-                  </p>
+                  <MailForm />
                 </div>
               </motion.div>
             )}

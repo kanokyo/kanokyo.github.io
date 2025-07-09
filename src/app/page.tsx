@@ -4,21 +4,18 @@ import Hero from "@/components/Hero";
 import Test from "@/components/test";
 import Skills from "@/components/Skills";
 import Works from "@/components/Works";
-import Contact from "@/components/Contact";
-import MailForm from "@/components/MailForm";
 
 export default function Home() {
   return (
-    <main className="">
-      {/* <Test /> */}
-      <Header />
-      <Hero />
-      <AboutME />
-      <Skills />
-      <Works />
-      <Contact />
-      <MailForm />
-      <div id="mailForm"></div>
-    </main>
+    <div className="h-full">
+      <div className="relative h-full w-full bg-slate-950 ">
+        {/* <Test /> */}
+        <Header />
+        <Hero />
+        <AboutME />
+        <Skills />
+        <Works />
+      </div>
+    </div>
   );
 }

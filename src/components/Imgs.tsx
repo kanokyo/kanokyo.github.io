@@ -36,8 +36,8 @@ const Imgs = () => {
         <CarouselContent>
           {images.map((img, idx) => (
             <CarouselItem key={idx}>
-              <Card className="rounded-xl overflow-hidden ">
-                <CardContent className="relative flex justify-center">
+              <Card className="rounded-xl overflow-hidden">
+                <CardContent className="relative flex justify-center p-0 z-30">
                   <Image
                     src={img}
                     alt={`portfolio image ${idx + 1}`}
@@ -50,8 +50,8 @@ const Imgs = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
-        <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
+        <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-50" />
+        <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-50" />
       </Carousel>
     </div>
   );
