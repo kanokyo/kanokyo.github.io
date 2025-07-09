@@ -3,9 +3,8 @@ const { google } = require("googleapis");
 const readline = require("readline");
 
 // 1) ここに先ほど取得したクライアントID／シークレットを入れる
-const CLIENT_ID =
-    "872853351843-mj8n3imsoo5o3on3g1f1emjvvg00t5ep.apps.googleusercontent.com";
-const CLIENT_SECRET = "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";
+const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 const REDIRECT_URI = "http://localhost:3000/api/auth/callback"; // OAuth設定と合わせる
 
 const oauth2Client = new google.auth.OAuth2(
