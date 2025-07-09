@@ -34,3 +34,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.tsscripts/get_refresh_token.js
+scripts/get_refresh_token.js
