@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 // app/api/sheet/route.ts
 import { NextResponse } from "next/server";
 import { fetchSheetData } from "../googleSheets";
