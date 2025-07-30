@@ -15,12 +15,18 @@ import MailForm from "./MailForm";
 const Contact = () => {
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <div className="flex flex-col" id="contact">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="flex flex-col "
+      id="contact"
+    >
       <Dialog>
         <DialogTrigger>Contact</DialogTrigger>
-        <DialogContent>
+        <DialogContent className="bg-white/90">
           <DialogHeader>
-            <div className="flex justify-around gap-5 text-sm font-mono ">
+            <div className="flex  justify-around gap-5 text-sm font-mono ">
               <Link href="https://github.com/Ad4cat/" target="_blank">
                 <div className="flex space-x-1 group hover:cursor-pointer">
                   <Github />
@@ -46,8 +52,8 @@ const Contact = () => {
               <motion.div
                 className="overflow-hidden bg-gray-50 rounded-lg shadow-lg mt-4"
                 layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
@@ -59,7 +65,7 @@ const Contact = () => {
           </AnimatePresence>
         </DialogContent>
       </Dialog>
-    </div>
+    </motion.div>
   );
 };
 

@@ -33,7 +33,7 @@ const Profile = () => {
                 {/* 一言 */}
                 <div className="text-sm w-full flex items-center justify-center lg:justify-end p-2 mx-auto lg:mx-0">
                   <span className="max-w-72">
-                    情報系の大学で学んだ知識を活かし、現代的なWeb技術を使用したアプリケーション開発に取り組んでいます。
+                    情報系の大学で学んだ知識を活かし、モダンなWeb技術を使用したアプリケーション開発に取り組んでいます。
                     ユーザビリティとパフォーマンスの両立を重視し、継続的な学習により技術の向上に努めています。
                   </span>
                 </div>

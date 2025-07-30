@@ -7,14 +7,16 @@ import Works from "@/components/Works";
 
 export default function Home() {
   return (
-    <div className="h-full">
-      <div className="relative h-full w-full bg-slate-950 ">
+    <div className="h-full w-full">
+      <div className=" bg-slate-950">
         {/* <Test /> */}
         <Header />
-        <Hero />
-        <AboutME />
-        <Skills />
-        <Works />
+        <div className="p-5">
+          <Hero />
+          <AboutME />
+          <Skills />
+          <Works />
+        </div>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ const Header = () => {
       initial="hidden"
       animate="visible"
       transition={{ type: "spring", duration: 1.5, delay: 1 }}
-      className="fixed w-full mx-auto sm:px-10 md:20 flex justify-center space-x-3 sm:justify-between items-center p-5 text-sm font-medium z-50 bg-transparent   text-gray-300"
+      className="fixed w-full mx-auto sm:px-10 md:20 flex justify-between space-x-3 items-center p-5 text-sm font-medium z-50 bg-transparent text-gray-300"
     >
       <div className="flex space-x-3 sm:gap-4 sm:space-x-5">
         <motion.button
