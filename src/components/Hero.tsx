@@ -6,7 +6,22 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="flex items-center justify-center h-screen z-30">
-      <motion.div className="container mx-auto grid grid-cols-2 grid-rows-4 gap-4 sm:grid-cols-3 sm:grid-rows-2 max-h-screen py-16 mt-10 sm:mt-0 sm:py-0 px-4 lg:py-24 lg:gap-24 lg:grid-cols-4"></motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -30, scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 120,
+          damping: 15,
+          duration: 2,
+          delay: 0.3,
+        }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="font-ericaOne text-4xl text-white text-center"
+      >
+        WelCome to my PortFolio
+      </motion.div>
     </div>
   );
 };

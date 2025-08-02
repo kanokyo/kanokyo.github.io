@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ChevronRight, Github, Mail } from "lucide-react";
+import { ChevronRight, CircleAlert, Github, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import MailForm from "./MailForm";
@@ -19,12 +19,14 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="flex flex-col "
+      className="flex flex-col"
       id="contact"
     >
       <Dialog>
         <DialogTrigger>Contact</DialogTrigger>
-        <DialogContent className="bg-white/90">
+        <DialogContent
+          className={`bg-white/90  ${open ? "rounded-none" : "rounded-none"}`}
+        >
           <DialogHeader>
             <div className="flex  justify-around gap-5 text-sm font-mono ">
               <Link href="https://github.com/Ad4cat/" target="_blank">
@@ -55,9 +57,29 @@ const Contact = () => {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
               >
                 <div className="p-4">
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg shadow-sm">
+                    <div className="flex items-center space-x-2">
+                      <CircleAlert className="w-5 h-5 text-red-400" />
+                      <span className="text-sm text-red-700 font-medium">
+                        申し訳ありません。ただいまGMail
+                        APIの制限によりメール送信ができません。
+                      </span>
+                    </div>
+                    <div className="mt-2 text-sm text-red-600">
+                      お手数ですが、下記メールアドレス宛にご連絡をお願いいたします。
+                    </div>
+                    <div className="mt-1">
+                      <a
+                        href="mailto:Hodie.o6435@gmail.com"
+                        className="text-sm font-semibold text-blue-500 hover:underline"
+                      >
+                        Hodie.o6435@gmail.com
+                      </a>
+                    </div>
+                  </div>
                   <MailForm />
                 </div>
               </motion.div>

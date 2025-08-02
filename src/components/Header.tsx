@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Contact from "./Contact";
 import { Code, FolderOpen, Meh, MessageCircle, Smile } from "lucide-react";
-import { Separator } from "@radix-ui/react-separator";
 
 const onRendering = {
   hidden: { y: -100 },

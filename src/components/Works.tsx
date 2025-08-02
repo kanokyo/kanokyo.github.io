@@ -14,43 +14,49 @@ const works = [
     skills: ["Next.js", "TypeScript", "framer-motion", "tailwindcss"],
     discription:
       "CSSの3Dアニメーションも使い、入力してて飽きないアニメーションと見やすいデザインを意識して作成しました。",
-    img: "/fuk2.jpg",
+    img: "/360.png",
     link: "https://360-impressions.vercel.app/",
-    period: "2025/05~ 約2週間",
+    period: "2025/07~ 約2週間",
   },
   {
     title: "PortFolio",
     skills: ["Next.js", "TypeScript", "framer-motion", "tailwindcss"],
     discription:
-      "このサイトです。今まで作ったサイトよりframer-motionを多用し、より動的で魅力的なインタラクションを実現しています。",
+      "このサイトです。シンプルで見やすいデザインにし、ユーザー体験を向上させつつ、再利用可能なUIコンポーネントを設計し、自身のスキルと制作物を直感的に紹介できる構成にしています。",
     img: "/fuk2.jpg",
     link: "https://github.com/Ad4cat/Ad4cat.github.io",
-    period: "2025/04~ 約1ヶ月",
+    period: "2025/07~ 約1ヶ月",
   },
   {
     title: "hotelmate",
-    skills: ["Next.js", "TypeScript", "framer-motion", "tailwindcss"],
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "tailwindcss",
+      "framer-motion",
+      "supabase",
+    ],
     discription:
-      "宿泊施設の検索を行えるWebアプリ。フィルター機能で、目的に合ったホテルをすぐに見つけられます。",
-    img: "/fuk.jpg",
+      "データベースへのデータの出し入れやユーザー認証機能などSupabaseを本格的に活用しました。また、Loading画面やFramerMotionを使ったアニメーションや、動的ルーティングなど、これまで触れてこなかった技術にも挑戦しました。",
+    img: "/hotelmates.png",
     link: "https://hotelmates.vercel.app/",
-    period: "2025/03~ 約1ヶ月",
+    period: "2025/04~ 約2ヶ月",
   },
   {
     title: "apparel",
     skills: [
       "Next.js",
       "TypeScript",
-      "framer-motion",
       "tailwindcss",
       "Clark",
       "stripe",
+      "supabase",
     ],
     discription:
-      "ファッションアイテムを紹介・販売するECサイト。レスポンシブデザインと直感的なUIで、スマホからでも快適にショッピングを楽しめます。",
-    img: "/gua.jpg",
+      "Next.jsを学ぶために作成した初めてのプロジェクトです。YouTubeやChatGPTを活用し、Next.jsの基本的な概念や使い方を理解するとともに、Clerkによるユーザー認証やSupabaseによるバックエンドとの連携やShadcn/uiを用いたUIコンポーネント設計にも挑戦しました。",
+    img: "/apparel.png",
     link: "https://apparel-two-delta.vercel.app/",
-    period: "2025/02~ 約1ヶ月",
+    period: "2025/02~ 約2ヶ月",
   },
   {
     title: "keibaAI",
@@ -59,7 +65,7 @@ const works = [
       "機械学習を活用して競馬のレース結果を予測するAIシステム。LightGBMを用いたモデルと豊富な特徴量で、それなりの精度を実現しました。",
     img: "/kamu.jpg",
     link: "https://github.com/Ad4cat/newKeibaAI",
-    period: "2023/08~ 約2ヶ月",
+    period: "2023/08~ 約6ヶ月",
   },
 ];
 
@@ -77,7 +83,7 @@ const Works = () => {
             WORKs
           </h1>
         </motion.div>
-        <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-5">
+        <div className="grid grid-col-1 sm:grid-cols-2 xl:grid-cols-3  gap-5 px-5">
           {works.map((work, idx) => (
             <motion.div
               variants={FadeIn}
@@ -95,9 +101,12 @@ const Works = () => {
               <Link href={work.link} target="_blank">
                 <Card className="relative bg-white/50 backdrop-blur-sm h-full">
                   <CardHeader>
-                    <div className="flex justify-between items-center mb-4">
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between items-start md:items-center w-full gap-3 mb-4">
                       <CardTitle className="">{work.title}</CardTitle>
-                      <span>制作期間: {work.period}</span>
+                      <div className="flex flex-col justify-start">
+                        <span>制作期間:</span>
+                        <span>{work.period}</span>
+                      </div>
                     </div>
                     <Separator />
                   </CardHeader>

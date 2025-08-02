@@ -31,7 +31,7 @@ export const images: StaticImageData[] = [
 
 const Imgs = () => {
   return (
-    <div className="w-fit m-5 hidden lg:flex">
+    <div className="w-fit m-5 hidden md:flex">
       <Carousel className="relative max-w-52">
         <CarouselContent>
           {images.map((img, idx) => (
