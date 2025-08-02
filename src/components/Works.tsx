@@ -79,9 +79,12 @@ const Works = () => {
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
         >
-          <h1 className="font-bold text-3xl flex justify-center p-10 text-white ">
-            WORKs
-          </h1>
+          <div className="flex flex-col w-full justify-center items-center p-10">
+            <h1 className="font-bold text-3xl pb-2 text-white ">WORKs</h1>
+            <p className="text-sm text-gray-400">
+              タップ(クリック)でそれぞれのページに遷移します。
+            </p>
+          </div>
         </motion.div>
         <div className="grid grid-col-1 sm:grid-cols-2 xl:grid-cols-3  gap-5 px-5">
           {works.map((work, idx) => (
