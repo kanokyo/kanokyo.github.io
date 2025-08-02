@@ -14,7 +14,7 @@ const AboutME = () => {
           variants={FadeIn}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           <h1 className="font-bold text-3xl flex justify-center p-10 text-white">
             ABOUT

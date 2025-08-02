@@ -20,7 +20,7 @@ const Header = () => {
       variants={onRendering}
       initial="hidden"
       animate="visible"
-      transition={{ type: "spring", duration: 1.5, delay: 1 }}
+      transition={{ type: "spring", duration: 1.5, delay: 2 }}
       className="fixed w-full mx-auto sm:px-10 md:20 flex justify-between space-x-3 items-center p-5 text-sm font-medium z-50 bg-transparent text-gray-300"
     >
       <div className="flex space-x-3 sm:gap-4 sm:space-x-5">
