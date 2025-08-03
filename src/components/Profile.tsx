@@ -23,10 +23,10 @@ const Profile = () => {
               <div className="space-y-10">
                 <div className="flex flex-col space-y-1 sm:mx-0 ">
                   <span className="text-sm flex sm: lg:justify-end mx-auto lg:mx-0 sm:pr-4 ">
-                    Tanaka Taiki
+                    Kanou Kyohei
                   </span>
                   <span className="text-3xl flex lg:justify-end mx-auto lg:mx-0 sm:pr-4">
-                    田中 大輝
+                    叶　京平
                   </span>
                 </div>
 

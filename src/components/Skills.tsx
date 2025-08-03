@@ -22,7 +22,7 @@ const skills = [
   },
   {
     title: "バックエンド",
-    skills: ["Node.js", "Python", "PostgreSQL", "Clerk"],
+    skills: ["Node.js", "Python", "PostgreSQL"],
   },
   {
     title: "ツール・その他",
@@ -30,13 +30,14 @@ const skills = [
       "Git",
       "GitHub",
       "VS Code",
-      "Figma",
-      "Docker",
+      "Cursor",
       "Vercel",
       "supabase",
       "stripe",
+      "Clerk",
     ],
   },
+  { title: "モバイル開発", skills: ["React Native(勉強中)"] },
 ];
 
 const Skills = () => {
