@@ -11,6 +11,7 @@ import { ChevronRight, CircleAlert, Github, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import MailForm from "./MailForm";
+import { SiZenn } from "react-icons/si";
 
 const Contact = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -32,6 +33,12 @@ const Contact = () => {
               <Link href="https://github.com/Ad4cat/" target="_blank">
                 <div className="flex space-x-1 group hover:cursor-pointer">
                   <Github />
+                  <ChevronRight className="transform group-hover:translate-x-1 transition duration-300" />
+                </div>
+              </Link>
+              <Link href="https://zenn.dev/ad4cat/" target="_blank">
+                <div className="flex space-x-1 group items-center hover:cursor-pointer">
+                  <SiZenn className="w-5 h-5 " />
                   <ChevronRight className="transform group-hover:translate-x-1 transition duration-300" />
                 </div>
               </Link>
