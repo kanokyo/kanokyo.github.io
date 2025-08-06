@@ -39,7 +39,7 @@ const Hero = () => {
             repeatType: "reverse",
             delay: 2.5,
           }}
-          className="absolute bottom-1/4 w-1 h-12 bg-white"
+          className="absolute bottom-1/4 w-1 h-12 bg-white "
         />
       </motion.div>
     </motion.div>

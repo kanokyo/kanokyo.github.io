@@ -52,7 +52,7 @@ const Contact = () => {
           <AnimatePresence initial={false} mode="wait">
             {open && (
               <motion.div
-                className="overflow-hidden bg-gray-50 rounded-lg shadow-lg mt-4"
+                className="overflow-hidden bg-gray-50 rounded-lg shadow-lg mt-4 max-h-[500px] overflow-y-auto"
                 layout
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
