@@ -6,7 +6,6 @@
 ・React
 ・Tailwind CSS
 ・Framer Motion
-・Radix UI（@radix-ui/react-\* 系コンポーネント）
 
 ## バックエンド
 
@@ -16,7 +15,6 @@
 ## その他・ツール
 
 ・TypeScript
-・ESLint（eslint-config-next）
-・PostCSS（autoprefixer を含む）
+・ESLint
 ・GitHub Pages（gh-pages）
 ・Yarn
