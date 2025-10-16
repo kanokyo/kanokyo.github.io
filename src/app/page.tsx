@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="h-full w-full">
       <div className=" bg-slate-950">
-        {/* <Test /> */}
+        {/* <Testcomponent /> */}
         <Header />
         <div className="p-5">
           <Hero />
